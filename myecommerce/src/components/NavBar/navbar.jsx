@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import  CartWidget from '../cartWidget/cartWidget';
 
-function App() {
+function Navbarjsx() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -30,4 +30,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navbarjsx;
