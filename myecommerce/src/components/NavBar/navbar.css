@@ -1,0 +1,31 @@
+.bg-custom {
+    background-color: #FFF5E4;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   font-size: larger;
+   font-weight: bold;
+  }
+  
+  .bg-custom2 {
+    background-color: #FFF5E4;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   font-size: larger;
+   font-weight: bold;
+  }
+  
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .container a {
+    color: #000000;
+    text-decoration: none; 
+        margin: 0 10px; 
+  }
+  
+  .container a:hover {
+    text-decoration: underline; 
+  }
+  

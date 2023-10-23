@@ -1,31 +1,46 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import  CartWidget from '../cartWidget/cartWidget';
+import CartWidget from '../cartWidget/cartWidget';
+import Dropdown from 'react-bootstrap/Dropdown';
+import './navbar.css';
+
+const categorias = [
+  "electronics",
+  "jewelry",
+  "men's clothing",
+  "women's clothing"
+];
 
 function Navbarjsx() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-custom">
       <Container>
-        <Navbar.Brand href="#home">My Ecommerce</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Contacto</Nav.Link>
-            <Nav.Link href="#link">Nosotros</Nav.Link>
-            <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Productos1</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Productos2</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Link to="/">Inicio</Link>
+            <Link to="/products" className="text-custom">Productos</Link>
+            <Link to="/nosotros" className="text-custom">Nosotros</Link>
+            <Dropdown>
+              <Dropdown.Toggle as={Link} to="#" variant="light" id="dropdown-ba">
+                Categorías
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to={'/products'}>Todos</Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item as={Link} to={"/category/electronics"}>Electronics</Dropdown.Item>
+                <Dropdown.Item as={Link} to={'/category/jewelery'}>Jewelry</Dropdown.Item>
+                <Dropdown.Item as={Link} to={"/category/men's%20clothing"}>Men's clothing</Dropdown.Item>
+                <Dropdown.Item as={Link} to={"/category/women's%20clothing"}>Women's clothing</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
-      <CartWidget/>
+      <CartWidget />
     </Navbar>
   );
 }
