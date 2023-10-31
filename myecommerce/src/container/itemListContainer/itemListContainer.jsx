@@ -17,7 +17,7 @@ const ItemListContainer = ({ greeting }) => {
             .catch(error => console.error(error))
         console.log(nombreCategoria)
     }, [nombreCategoria])
-    
+
     return (
         <>
             <h2 className="saludo">{greeting}</h2>
