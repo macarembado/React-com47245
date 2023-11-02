@@ -7,7 +7,7 @@ const Bienvenida = () => {
     <div className="bienvenida-container">
       <h1 className="bienvenida-text">Bienvenidos a Nuestra Tienda Online</h1>
       <Link to="/products">
-        <button className="btn btn-dark bienvenida-button">Ver Productos</button>
+        <button className="btn btn-outline-dark bienvenida-button">Ver Productos</button>
       </Link>
     </div>
   );
