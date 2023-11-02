@@ -12,7 +12,7 @@ const ItemListContainer = ({ greeting }) => {
             .then(res => res.json())
             .then(json => {
                 console.log(json)
-                setProducts(json)
+                setProducts(nombreCategoria? json : json)
             })
             .catch(error => console.error(error))
         console.log(nombreCategoria)
@@ -21,7 +21,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <h2 className="saludo">{greeting}</h2>
-            {products.length > 6 ? (
+            {products.length > 0 ? (
                 <>
                     {products.map(pr => <Item producto={pr} key={pr.id} />)}
                 </>
