@@ -1,13 +1,17 @@
+// CartWidget.jsx
 import { FaShoppingCart } from 'react-icons/fa';
 import Badge from 'react-bootstrap/Badge';
+import React, { useContext } from 'react'; 
+import { CartContext } from '../context/shopContext'; 
 
-
-const CartWidget = () => {
+function CartWidget() {
+  const { getTotalQuantity } = useContext(CartContext); 
+  const total = getTotalQuantity();
   return (
     <>
       <Badge bg="primary">
         <FaShoppingCart /> 
-        6
+        {total}
       </Badge>
     </>
   );

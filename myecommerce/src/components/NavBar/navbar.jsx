@@ -31,10 +31,9 @@ function Navbarjsx() {
               <Dropdown.Menu>
                 <Dropdown.Item as={Link} to={'/products'}>Todos</Dropdown.Item>
                 <Dropdown.Divider />
-                <Dropdown.Item as={Link} to={"/category/electronics"}>Electronics</Dropdown.Item>
-                <Dropdown.Item as={Link} to={'/category/jewelery'}>Jewelry</Dropdown.Item>
-                <Dropdown.Item as={Link} to={"/category/men's%20clothing"}>Men's clothing</Dropdown.Item>
-                <Dropdown.Item as={Link} to={"/category/women's%20clothing"}>Women's clothing</Dropdown.Item>
+                <Dropdown.Item as={Link} to={"/category/pantalones"}>pantalones</Dropdown.Item>
+                <Dropdown.Item as={Link} to={'/category/remeras'}>remeras</Dropdown.Item>
+                <Dropdown.Item as={Link} to={"/category/zapatillas"}>zapatillas</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Nav>

@@ -1,0 +1,19 @@
+.item-count-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .item-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .add-to-cart {
+    margin-top: 10px;
+    width: 150px;
+  }
+  
