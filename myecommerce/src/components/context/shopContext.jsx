@@ -35,11 +35,11 @@ const ShoppingCartProvider = ({ children }) => {
         const updatedCart = [...cart];
         updatedCart[existingItemIndex].quantity += quantity;
         setCart(updatedCart);
-      } else {
+      } else {  
         setCart((prevCart) => [...prevCart, { product: productToAdd, quantity }]);
       }
     } catch (error) {
-      console.error("Error al agregar producto al carrito:", error);
+      console.error("Error", error);
     }
   };
 
