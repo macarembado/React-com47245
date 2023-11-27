@@ -14,7 +14,7 @@ const Cart = () => {
   return (
     <Container className="cart-container">
       <div >
-        <h1>Carrito de Compras</h1>
+        <h1>Tu Carrito de Compras</h1>
       </div>
       {cart.length === 0 ? (
         <div>
