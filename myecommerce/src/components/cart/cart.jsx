@@ -13,18 +13,17 @@ const Cart = () => {
 
   return (
     <Container className="cart-container">
-      <div className="text-center mb-4">
+      <div >
         <h1>Carrito de Compras</h1>
       </div>
       {cart.length === 0 ? (
-        <div className="text-center mb-4">
+        <div>
         </div>
       ) : (
         <>
-          <Row xs={1} md={2} lg={3} className="g-4">
+         
             {cart.map((item) => (
               <Card key={item.product.id} className="card">
-                <Card.Img variant="top" src={item.product.image} />
                 <Card.Body>
                   <Card.Title>{item.product.title}</Card.Title>
                   <Card.Text>
@@ -32,22 +31,22 @@ const Cart = () => {
                     Cantidad: {item.quantity}<br />
                     Valor total: ${item.product.price * item.quantity}
                   </Card.Text>
-                  <Button variant="danger" onClick={() => removeFromCart(item.product.id)}>
+                  <Button variant="warning" onClick={() => removeFromCart(item.product.id)}>
                     Eliminar
                   </Button>
                 </Card.Body>
               </Card>
             ))}
-          </Row>
-          <div className="d-flex flex-column align-items-center mt-4">
-            <p className="mb-3">
+        
+          <div>
+            <p >
               Total: ${getTotalPrice()}
             </p>
-            <div className="d-flex justify-content-around w-100">
+            <div>
               <Link to="/CheckOut" className="btn btn-success w-40">
                 Comprar
               </Link>
-              <Button variant="danger" className="w-40" onClick={handleClearCart}>
+              <Button variant="warning"  onClick={handleClearCart}>
                 Vaciar Carrito
               </Button>
             </div>

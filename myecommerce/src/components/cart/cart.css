@@ -1,46 +1,35 @@
-/* Cart.css */
-
-/* Estilos para el contenedor del carrito */
 .cart-container {
-    margin-top: 20px;
-  }
-  
-  /* Estilos para los elementos del carrito */
-  .card {
-    background-color: #f9f9f9;
-    margin: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  .card img {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-title {
-    color: #333;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .card-text {
-    color: #333;
-    font-size: 16px;
-  }
-  
-  /* Estilos para los botones */
-  .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
-  }
-  
-  .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
+  padding: 20px;
+  background-color: #000;
+  border-radius: 8px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+
+.cart-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+
+.cart-products {
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; 
+}
+
+.mb-3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
